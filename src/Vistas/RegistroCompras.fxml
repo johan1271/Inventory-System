@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="787.0" prefWidth="929.0" style="-fx-background-color: #99a5b0; -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1; }: ;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RegistroComprasController">
+   <children>
+      <TextField fx:id="buscadorclientes" layoutX="67.0" layoutY="147.0" prefHeight="27.0" prefWidth="327.0" promptText="Buscar" styleClass="Textfield" stylesheets="@../css/style.css" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="147.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label layoutX="56.0" layoutY="54.0" text="Buscar compra" textFill="#f2f2f2">
+         <font>
+            <Font name="Segoe UI Black" size="50.0" />
+         </font>
+      </Label>
+      <SplitPane dividerPositions="0.5" layoutX="67.0" layoutY="199.0" orientation="VERTICAL" prefHeight="517.0" prefWidth="783.0" style="-fx-border-radius: 20;" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="199.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-border-radius: 20;">
+               <children>
+                  <TableView fx:id="tablaclientes1" prefHeight="285.0" prefWidth="781.0" styleClass="tabla" stylesheets="@../css/tabla.css" AnchorPane.bottomAnchor="-30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="idfactura" prefWidth="110.0" text="ID " />
+                        <TableColumn fx:id="fechafactura" prefWidth="110.0" text="Fecha" />
+                        <TableColumn fx:id="codfactura" prefWidth="110.0" text="Codigo Factura" />
+                        <TableColumn fx:id="clientefactura" prefWidth="110.0" text="Proveedor" />
+                        <TableColumn fx:id="estadofactura" prefWidth="110.0" text="Total" />
+                        <TableColumn fx:id="estadofactura1" prefWidth="110.0" text="Estado" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="806.0">
+               <children>
+                  <TableView fx:id="tablaclientes" prefHeight="285.0" prefWidth="783.0" styleClass="tabla" stylesheets="@../css/tabla.css" AnchorPane.bottomAnchor="-31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="idclientes" prefWidth="110.0" text="ID" />
+                        <TableColumn fx:id="nombreclientes" prefWidth="110.0" text="Descripcion" />
+                        <TableColumn fx:id="edadclientes" prefWidth="110.0" text="Categoria" />
+                        <TableColumn fx:id="sexoclientes" prefWidth="110.0" text="Cantidad" />
+                        <TableColumn fx:id="telefonoclientes" prefWidth="110.0" text="Precio Unidad" />
+                        <TableColumn fx:id="direccionclientes" prefWidth="110.0" text="Precio Total" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <HBox layoutX="720.0" layoutY="147.0" prefHeight="27.0" prefWidth="130.0" spacing="20.0" AnchorPane.bottomAnchor="613.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="147.0">
+         <children>
+            <JFXButton fx:id="btnanularfac" prefHeight="27.0" prefWidth="128.0" style="-fx-background-color: #3E93DE;" text="Anular" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="BAN" size="1.5em" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

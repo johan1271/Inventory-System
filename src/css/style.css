@@ -1,0 +1,23 @@
+.Textfield {
+  
+  -fx-background-color: transparent;
+  -fx-border-color: white;
+  -fx-border-width: 0px 0px 2px 0px;
+  -fx-prompt-text-fill: white;
+}
+.Textfield2 {
+  
+  -fx-background-color: transparent;
+  -fx-border-color:  #f2f2f2;
+  -fx-border-width: 0px 0px 2px 0px;
+  -fx-prompt-text-fill: white;
+  -fx-text-fill: white;
+}
+
+.Background{
+  -fx-background-color:  #99a5b0;
+}
+
+
+
+

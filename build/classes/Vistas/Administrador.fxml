@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="839.0" prefWidth="1322.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.AdminController">
+   <children>
+      <AnchorPane layoutX="210.0" layoutY="47.0" prefHeight="661.0" prefWidth="1112.0" styleClass="Background" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <StackPane fx:id="stack" layoutX="-9.0" prefHeight="792.0" prefWidth="1121.0" style="-fx-background-color: #99a5b0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="1139.0" style="-fx-background-color: #023A61;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="37.0" layoutY="8.0" text="ALCATRAZ" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="nombreadmin" layoutX="1022.0" layoutY="5.0" prefHeight="40.0" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font name="Segoe UI Black" size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" selectionEnd="0" size="2.5em" strokeWidth="2.0" textOrigin="CENTER" wrappingWidth="37.71428680419922" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane accessibleRole="BUTTON" layoutX="-1.0" layoutY="50.0" prefHeight="658.0" prefWidth="215.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox layoutX="5.0" layoutY="26.0" prefHeight="849.0" prefWidth="202.0" spacing="14.5" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="26.0">
+               <children>
+                  <JFXButton fx:id="BtnInicio" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#home" prefHeight="41.0" prefWidth="211.0" text="Inicio">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="HOME" size="2.7em" />
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnClientes" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#clientes" prefHeight="40.0" prefWidth="217.0" text="Clientes">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cliente.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnProductos" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#productos" prefHeight="40.0" prefWidth="213.0" text="Productos">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/producto.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="Btncategorias" alignment="BASELINE_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="121.0" onAction="#categorias" prefHeight="40.0" prefWidth="213.0" text="Categorias">
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="BOOK" size="2.5EM" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnProveedores" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#proveedores" prefHeight="40.0" prefWidth="212.0" text="Proveedores">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/proveedor.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnFactura" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#factura" prefHeight="40.0" prefWidth="211.0" text="Factura">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/factura.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnBuscarFactura" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#buscarfactura" prefHeight="40.0" prefWidth="211.0" text="Ventas">
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/punto-de-venta%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnCompras" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#compras" prefHeight="40.0" prefWidth="211.0" text="Compras">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/registro%20compra.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnRegistroCompras" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#buscarcompras" prefHeight="40.0" prefWidth="211.0" text="Registro de compras">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/buscando%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnInfocompras" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#informecompras" prefHeight="40.0" prefWidth="215.0" text="Informe de compras">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporte%20compras.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnInfoVentas" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#informeventas" prefHeight="40.0" prefWidth="209.0" text="Informe ventas">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporte-ventas.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnUsuarios" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#usuarios" prefHeight="40.0" prefWidth="209.0" text="Usuarios">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/gestionar%20usuarios.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="17.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSalir" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#Salir" prefHeight="40.0" prefWidth="215.0" text="Salir" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="CLOSE" size="35px" text="">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="4.75">
+               <color>
+                  <Color red="0.05263157933950424" green="0.018518518656492233" blue="0.018518518656492233" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

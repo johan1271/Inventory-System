@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="744.0" prefWidth="1247.0" style="-fx-background-color: #99a5b0; -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.UsuariosController">
+   <children>
+      <TextField fx:id="buscador" layoutX="53.0" layoutY="126.0" onKeyReleased="#Filtrar" prefHeight="27.0" prefWidth="327.0" promptText="Buscar" styleClass="Textfield" stylesheets="@../css/style.css" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="126.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TableView fx:id="tabla" layoutX="53.0" layoutY="175.0" onMouseClicked="#ClickRow" prefHeight="518.0" prefWidth="790.0" styleClass="tabla" stylesheets="@../css/tabla.css" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="175.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="110.0" text="ID" />
+            <TableColumn fx:id="nombre" prefWidth="110.0" text="Nombre" />
+            <TableColumn fx:id="apellido" prefWidth="110.0" text="Apellido" />
+            <TableColumn fx:id="edad" prefWidth="110.0" text="Edad" />
+            <TableColumn fx:id="sexo" prefWidth="110.0" text="Sexo" />
+            <TableColumn fx:id="telefono" prefWidth="110.0" text="Telefono" />
+            <TableColumn fx:id="direccion" prefWidth="110.0" text="Direccion" />
+            <TableColumn fx:id="cargo" prefWidth="110.0" text="Cargo" />
+            <TableColumn fx:id="contra" prefWidth="110.0" text="Contraseña" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Label layoutX="53.0" layoutY="32.0" text="Gestionar usuarios" textFill="#f2f2f2">
+         <font>
+            <Font name="Segoe UI Black" size="50.0" />
+         </font>
+      </Label>
+      <AnchorPane id="AnchorPane" layoutX="885.0" layoutY="122.0" prefHeight="571.0" prefWidth="318.0" style="-fx-background-color: #023A61;" styleClass="mainFxmlClass" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="122.0">
+         <children>
+            <VBox alignment="CENTER" layoutY="73.0" prefHeight="194.0" prefWidth="143.0" spacing="25.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="54.0" text="Cedula" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="52.0" layoutY="54.0" prefHeight="19.0" prefWidth="65.0" text="Nombre" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="64.0" text="Apellido" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="54.0" text="Edad" textFill="#f2f2f2">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="19.0" prefWidth="65.0" text="Telefono" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="19.0" prefWidth="65.0" text="Direccion" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="19.0" prefWidth="79.0" text="Contraseña" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="132.0" layoutY="59.0" prefHeight="307.0" prefWidth="143.0" spacing="16.0">
+               <children>
+                  <TextField fx:id="cedulatxt" styleClass="Textfield2" stylesheets="@../css/style.css">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="nombretxt" layoutX="10.0" layoutY="55.0" styleClass="Textfield2" stylesheets="@../css/style.css" />
+                  <TextField fx:id="apellidotxt" styleClass="Textfield2" stylesheets="@../css/style.css">
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="edadtxt" styleClass="Textfield2" stylesheets="@../css/style.css">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="telefonotxt" styleClass="Textfield2" stylesheets="@../css/style.css" />
+                  <TextField fx:id="direcciontxt" styleClass="Textfield2" stylesheets="@../css/style.css" />
+                  <TextField fx:id="contratxt" prefHeight="32.0" prefWidth="143.0" styleClass="Textfield2" stylesheets="@../css/style.css" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="31.0" layoutY="18.0" prefHeight="35.0" prefWidth="260.0" text="Datos del usuarios" textFill="#f2f2f2" AnchorPane.rightAnchor="27.0">
+               <font>
+                  <Font name="Segoe UI Black" size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="32.0" layoutY="369.0" prefHeight="63.0" prefWidth="244.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="15.0" prefHeight="17.0" prefWidth="54.0" text="Sexo" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="masculino" layoutX="150.0" layoutY="36.0" text="Masculino" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gentoggle" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="femenino" layoutX="6.0" layoutY="35.0" text="Femenino" textFill="WHITE" toggleGroup="$gentoggle">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <HBox layoutX="23.0" layoutY="524.0" prefHeight="27.0" prefWidth="277.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="guardar" onAction="#Click" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #3CC742;" text="Guardar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="modificar" onAction="#Click" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #3E93DE;" text="Modificar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="limpiar" onAction="#Click" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: red;" text="Limpiar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="32.0" layoutY="429.0" prefHeight="73.0" prefWidth="260.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="16.0" prefHeight="17.0" prefWidth="54.0" text="Cargo" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="empleado" layoutX="151.0" layoutY="44.0" text="Empleado" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="cargotoggle" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="admin" layoutX="5.0" layoutY="43.0" text="Administrador" textFill="WHITE" toggleGroup="$cargotoggle">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

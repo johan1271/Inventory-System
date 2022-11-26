@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="729.0" prefWidth="948.0" style="-fx-background-color: #99a5b0; -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.CategoriaController">
+   <children>
+      <TextField fx:id="buscador" layoutX="53.0" layoutY="126.0" onKeyReleased="#Filtrar" prefHeight="27.0" prefWidth="228.0" promptText="Buscar" styleClass="Textfield" stylesheets="@../css/style.css" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="126.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TableView fx:id="tabla" layoutX="53.0" layoutY="175.0" onMouseClicked="#ClickRow" prefHeight="518.0" prefWidth="236.0" styleClass="tabla" stylesheets="@../css/tabla.css" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="396.0" AnchorPane.topAnchor="175.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="110.0" text="ID" />
+            <TableColumn fx:id="nombre" prefWidth="110.0" text="Nombre" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Label layoutX="53.0" layoutY="32.0" text="Gestionar categorias de productos" textFill="#f2f2f2">
+         <font>
+            <Font name="Segoe UI Black" size="50.0" />
+         </font>
+      </Label>
+      <AnchorPane id="AnchorPane" layoutX="257.0" layoutY="175.0" prefHeight="208.0" prefWidth="318.0" style="-fx-background-color: #023A61;" styleClass="mainFxmlClass" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="175.0">
+         <children>
+            <VBox alignment="CENTER" layoutY="76.0" prefHeight="50.0" prefWidth="143.0" spacing="25.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="54.0" text="Nombre" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="134.0" layoutY="81.0" prefHeight="50.0" prefWidth="143.0" spacing="16.0">
+               <children>
+                  <TextField fx:id="nombretxt" styleClass="Textfield2" stylesheets="@../css/style.css">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="31.0" layoutY="23.0" prefHeight="35.0" prefWidth="260.0" text="Categorias" textFill="#f2f2f2" AnchorPane.rightAnchor="27.0">
+               <font>
+                  <Font name="Segoe UI Black" size="24.0" />
+               </font>
+            </Label>
+            <HBox layoutX="23.0" layoutY="149.0" prefHeight="27.0" prefWidth="277.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="guardar" onAction="#Click" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #3CC742;" text="Guardar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="modificar" onAction="#Click" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #3E93DE;" text="Modificar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="limpiar" onAction="#Click" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: red;" text="Limpiar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

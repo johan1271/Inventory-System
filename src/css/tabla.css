@@ -1,0 +1,26 @@
+.tabla{ 
+    -fx-background-color: white;
+    -fx-background-radius: 20px 20px 0px 0px;
+    -fx-fill: white;
+}
+
+.tabla .column-header-background{
+    -fx-background-color:  #023A61;
+    -fx-background-radius: 20px 20px 0px 0px;
+    -fx-background-insets: 0 0 10 0;
+    -fx-padding: 0 0 10 0;
+}
+
+.tabla .column-header, .table-view .filler{
+    -fx-size:30;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-radius: 20px 20px 0px 0px;
+    -fx-background-color: transparent;
+}
+.tabla .column-header .label{
+    -fx-text-fill:  white;
+}
+
+.tabla .table-column {
+  -fx-alignment: CENTER;
+}
